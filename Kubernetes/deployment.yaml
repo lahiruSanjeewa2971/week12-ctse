@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: week10ctse
+spec:
+  selector:
+    matchLabels:
+      app: week10ctse
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: week10ctse
+    spec: 
+      containers:
+        - name: week10ctse
+          image: lahirusanjeewa2971/week10ctse:v1
+          ports:
+            - containerPort: 5002
